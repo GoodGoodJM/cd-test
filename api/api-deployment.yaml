@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapi-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: myapi
@@ -13,8 +13,8 @@ spec:
         app: myapi
     spec:
       containers:
-      - name: nginx-container
-        image: amsy810/echo-nginx:v2.0
+      - name: api
+        image: ghcr.io/wewoogo/api:latest
 ---
 apiVersion: v1
 kind: Service
