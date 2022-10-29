@@ -12,6 +12,8 @@ spec:
       labels:
         app: myapi
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: api
         image: ghcr.io/wewoogo/api:latest
